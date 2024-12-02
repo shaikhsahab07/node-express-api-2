@@ -38,4 +38,6 @@ jobs:
     steps:
       - name: Output information
         run: |        
-          echo "..."
+          echo "Show MONGODBNAME: ${{ env.MONGODB_DB_NAME }}"
+          echo "Show PORT.NO: $PORT"
+          echo " Show MongoDB Cluster name: $MONGODB_CLUSTER_ADDRESS"
