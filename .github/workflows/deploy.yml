@@ -30,12 +30,4 @@ jobs:
             npm start & npx wait-on http://127.0.0.1:$PORT
         - name: Run tests
           run: npm test
-  deploy:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Output information
-        run: |        
-          echo "Show MONGODBNAME: ${{ env.MONGODB_DB_NAME }}"
-          echo "Show PORT.NO: $PORT"
-          echo " Show MongoDB Cluster name: $MONGODB_CLUSTER_ADDRESS"
+
